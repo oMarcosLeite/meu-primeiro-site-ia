@@ -12,11 +12,33 @@ with st.sidebar:
     st.info("Logado como: Desenvolvedor Imobiliário")
 
 # --- PÁGINA INICIAL ---
+# --- PÁGINA INICIAL (VITRINE) ---
 if opcao == "Início":
-    st.title("🏠 Bem-vindo à sua Plataforma Imobiliária")
-    st.write("Esta ferramenta foi criada para automatizar o seu dia a dia e proteger seu foco.")
-    st.image("https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80")
+    st.title("🏡 Portal Imobiliário Inteligente")
+    st.markdown("---")
+    
+    # Destaque principal
+    st.subheader("Destaques da Semana")
+    
+    # Criando colunas para os imóveis (Parece um site real)
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.image("https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=500&q=80")
+        st.markdown("### Casa de Condomínio - R$ 850.000")
+        st.write("📍 Localização: Jardim América")
+        if st.button("Ver Detalhes (Imóvel 1)"):
+            st.info("Aqui a IA poderia resumir o histórico deste imóvel para você.")
 
+    with col2:
+        st.image("https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=500&q=80")
+        st.markdown("### Cobertura Duplex - R$ 1.200.000")
+        st.write("📍 Localização: Vila Nova")
+        if st.button("Ver Detalhes (Imóvel 2)"):
+            st.info("A IA detectou que este imóvel está 10% abaixo do preço de mercado.")
+
+    st.markdown("---")
+    st.write("💡 *Dica do Desenvolvedor: Estas imagens e textos podem ser buscados automaticamente de um banco de dados no futuro.*")
 # --- CALCULADORA DE CUSTOS ---
 elif opcao == "Calculadora de Custos":
     st.title("💰 Calculadora de Impostos (Simulação)")
