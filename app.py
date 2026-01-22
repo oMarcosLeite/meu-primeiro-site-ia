@@ -1,28 +1,55 @@
 import streamlit as st
 
-# Configuração da página (o que aparece na aba do navegador)
-st.set_page_config(page_title="Minha PropTech", page_icon="🏠")
+st.set_page_config(page_title="PropTech Pro", page_icon="🏢", layout="wide")
 
-# Título Principal
-st.title("🚀 Assistente de Tecnologia Imobiliária")
-st.subheader("Transformando o mercado com IA e automação")
+# --- BARRA LATERAL (MENU) ---
+with st.sidebar:
+    st.title("⚙️ Painel de Controle")
+    opcao = st.radio(
+        "Escolha uma ferramenta:",
+        ("Início", "Calculadora de Custos", "Gerador de Checklist", "Formatador de Anúncio")
+    )
+    st.info("Logado como: Desenvolvedor Imobiliário")
 
-# Uma linha divisória para organizar o visual
-st.divider()
+# --- PÁGINA INICIAL ---
+if opcao == "Início":
+    st.title("🏠 Bem-vindo à sua Plataforma Imobiliária")
+    st.write("Esta ferramenta foi criada para automatizar o seu dia a dia e proteger seu foco.")
+    st.image("https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80")
 
-# Área de entrada de dados
-st.write("### Teste de Automação de Anúncio")
-descricao_bruta = st.text_area("Cole aqui as características do imóvel (ex: 2 qtos, suite, centro):")
+# --- CALCULADORA DE CUSTOS ---
+elif opcao == "Calculadora de Custos":
+    st.title("💰 Calculadora de Impostos (Simulação)")
+    valor_venda = st.number_input("Valor de Venda do Imóvel (R$):", min_value=0.0, step=10000.0)
+    itbi_percent = st.slider("Alíquota ITBI (%)", 1.0, 4.0, 2.0)
+    
+    if valor_venda > 0:
+        itbi_total = valor_venda * (itbi_percent / 100)
+        escritura_est = 5000.0  # Valor fictício para o exemplo
+        st.metric("Estimativa ITBI", f"R$ {itbi_total:,.2f}")
+        st.write(f"**Total aproximado de taxas:** R$ {itbi_total + escritura_est:,.2f}")
 
-# Botão que simula a ação da IA
-if st.button("Gerar Texto para Anúncio"):
-    if descricao_bruta:
-        # Aqui, no futuro, conectaremos a API do ChatGPT
-        # Por enquanto, ele apenas mostra que o sistema recebeu os dados
-        st.success("Sistema processando... (Aqui entrará a inteligência artificial)")
-        st.write(f"**Análise recebida:** {descricao_bruta}")
+# --- GERADOR DE CHECKLIST ---
+elif opcao == "Gerador de Checklist":
+    st.title("📋 Checklist de Documentos")
+    tipo = st.selectbox("Tipo de Vendedor:", ["Pessoa Física", "Pessoa Jurídica"])
+    
+    if tipo == "Pessoa Física":
+        st.checkbox("RG e CPF")
+        st.checkbox("Certidão de Casamento/Nascimento")
+        st.checkbox("Comprovante de Residência")
+        st.checkbox("Certidões Negativas (Justiça Federal, Cível, etc)")
     else:
-        st.warning("Por favor, digite algo para processar.")
+        st.checkbox("Contrato Social")
+        st.checkbox("Cartão CNPJ")
+        st.checkbox("Certidão Negativa de Débitos Previdenciários")
 
-# Rodapé simples
-st.sidebar.info("Este é o protótipo do seu futuro sistema de IA.")
+# --- FORMATADOR DE ANÚNCIO ---
+elif opcao == "Formatador de Anúncio":
+    st.title("✍️ Limpeza de Texto")
+    texto_sujo = st.text_area("Cole aqui o texto bagunçado do imóvel:")
+    if st.button("Limpar e Formatar"):
+        # Exemplo de lógica simples de limpeza
+        texto_limpo = texto_sujo.replace("!!!", "!").strip().capitalize()
+        st.code(texto_limpo, language=None)
+        st.success("Texto pronto para copiar!")
