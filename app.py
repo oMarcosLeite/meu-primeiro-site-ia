@@ -3,7 +3,7 @@ import streamlit as st
 st.markdown("""
     <style>
     .main {
-        background-color: #0a0a8f;
+        background-color: #FDFCF8;
     }
     .stButton>button {
         width: 100%;
