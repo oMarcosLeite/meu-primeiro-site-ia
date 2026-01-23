@@ -21,6 +21,7 @@ opcao = st.radio(
     "",
     ("Início", "Locação", "Venda", "Lançamento"),
     horizontal=True  # Adicionei isso para as opções ficarem lado a lado, como um menu de site
+    label_visibility="collapsed"
 )
 # --- PÁGINA INICIAL ---
 # --- PÁGINA INICIAL (VITRINE) ---
