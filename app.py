@@ -29,7 +29,7 @@ with st.sidebar:
 # --- PÁGINA INICIAL ---
 # --- PÁGINA INICIAL (VITRINE) ---
 if opcao == "Início":
-    st.title("🏡 Portal Imobiliário Inteligente")
+    st.title("🏡 Portal Cacau Imob")
     st.markdown("---")
     
     # Destaque principal
