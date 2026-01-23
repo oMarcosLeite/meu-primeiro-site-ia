@@ -60,16 +60,23 @@ if opcao == "Início":
     st.markdown("---")
     st.write("💡 *Dica do Desenvolvedor: Estas imagens e textos podem ser buscados automaticamente de um banco de dados no futuro.*")
 # --- CALCULADORA DE CUSTOS ---
-elif opcao == "Calculadora de Custos":
-    st.title("💰 Calculadora de Impostos (Simulação)")
-    valor_venda = st.number_input("Valor de Venda do Imóvel (R$):", min_value=0.0, step=10000.0)
-    itbi_percent = st.slider("Alíquota ITBI (%)", 1.0, 4.0, 2.0)
-    
-    if valor_venda > 0:
-        itbi_total = valor_venda * (itbi_percent / 100)
-        escritura_est = 5000.0  # Valor fictício para o exemplo
-        st.metric("Estimativa ITBI", f"R$ {itbi_total:,.2f}")
-        st.write(f"**Total aproximado de taxas:** R$ {itbi_total + escritura_est:,.2f}")
+# --- LOGICA DAS PÁGINAS ---
+
+# Antes era 'if opcao == "Início":'
+# Mudamos para 'Locação' para o site saber que esse é o conteúdo padrão
+if opcao == "Locação":
+    st.title("🏡 Imóveis para Locação")
+    # AQUI você coloca o código do seu "Outdoor" e da vitrine
+    st.image("sua_foto.jpg", use_container_width=True)
+    st.write("Confira nossas oportunidades exclusivas de aluguel.")
+
+elif opcao == "Venda":
+    st.title("🔑 Imóveis à Venda")
+    st.write("Encontre a casa dos seus sonhos para comprar.")
+
+elif opcao == "Lançamento":
+    st.title("🏗️ Novos Empreendimentos")
+    st.write("As melhores oportunidades na planta.")
 
 # --- GERADOR DE CHECKLIST ---
 elif opcao == "Gerador de Checklist":
