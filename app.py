@@ -17,6 +17,9 @@ st.markdown("""
 
 st.set_page_config(page_title="PropTech Pro", page_icon="🏢", layout="wide")
 # Agora o rádio de opções aparece no centro da página
+
+col_espaco1, col_espaco2, col_menu = st.columns([2, 1, 2])
+# 2. DEPOIS: Você usa a coluna que acabou de criar
 with col_menu:
     opcao = st.radio(
         "", 
