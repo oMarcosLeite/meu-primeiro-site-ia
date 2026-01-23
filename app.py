@@ -18,7 +18,6 @@ st.markdown("""
 st.set_page_config(page_title="PropTech Pro", page_icon="🏢", layout="wide")
 # Agora o rádio de opções aparece no centro da página
 opcao = st.radio(
-    "Escolha uma ferramenta:",
     ("Início", "Calculadora de Custos", "Gerador de Checklist", "Formatador de Anúncio"),
     horizontal=True  # Adicionei isso para as opções ficarem lado a lado, como um menu de site
 )
