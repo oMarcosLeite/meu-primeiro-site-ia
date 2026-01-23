@@ -16,11 +16,6 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 st.set_page_config(page_title="PropTech Pro", page_icon="🏢", layout="wide")
-
-# --- BARRA LATERAL (MENU) ---
-# --- MENU NO CORPO PRINCIPAL (Sem Sidebar) ---
-st.title("⚙️ Painel de Controle")
-
 # Agora o rádio de opções aparece no centro da página
 opcao = st.radio(
     "Escolha uma ferramenta:",
