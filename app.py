@@ -29,13 +29,23 @@ with col_menu:
     )
 # --- PÁGINA INICIAL ---
 # --- PÁGINA INICIAL (VITRINE) ---
-if opcao == "Início":
-    st.title("🏡 Portal Cacau Imob")
-    st.markdown("---")
-    st.image("foto1.jpg", use_container_width=True)
-    st.divider()
-    # Destaque principal
-    st.subheader("Destaques da Semana")
+# --- LOGICA DAS PÁGINAS ---
+
+# Antes era 'if opcao == "Início":'
+# Mudamos para 'Locação' para o site saber que esse é o conteúdo padrão
+if opcao == "Locação":
+    st.title("🏡 Imóveis para Locação")
+    # AQUI você coloca o código do seu "Outdoor" e da vitrine
+    st.image("sua_foto.jpg", use_container_width=True)
+    st.write("Confira nossas oportunidades exclusivas de aluguel.")
+
+elif opcao == "Venda":
+    st.title("🔑 Imóveis à Venda")
+    st.write("Encontre a casa dos seus sonhos para comprar.")
+
+elif opcao == "Lançamento":
+    st.title("🏗️ Novos Empreendimentos")
+    st.write("As melhores oportunidades na planta.")
     
     # Criando colunas para os imóveis (Parece um site real)
     col1, col2 = st.columns(2)
