@@ -17,12 +17,17 @@ st.markdown("""
 
 st.set_page_config(page_title="PropTech Pro", page_icon="🏢", layout="wide")
 # Agora o rádio de opções aparece no centro da página
-opcao = st.radio(
-    "",
-    ("Início", "Locação", "Venda", "Lançamento"),
-    horizontal=True  # Adicionei isso para as opções ficarem lado a lado, como um menu de site
-    label_visibility="collapsed"
-)
+# Criamos 3 colunas: as duas primeiras vazias (peso 2 e 1) 
+# e a última onde o menu vai morar (peso 2)
+col_espaco1, col_espaco2, col_menu = st.columns([2, 1, 2])
+
+with col_menu:
+    opcao = st.radio(
+        "", 
+        ("Locação", "Venda", "Lançamento"),
+        horizontal=True,
+        label_visibility="collapsed"
+    )
 # --- PÁGINA INICIAL ---
 # --- PÁGINA INICIAL (VITRINE) ---
 if opcao == "Início":
