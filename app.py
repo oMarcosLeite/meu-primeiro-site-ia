@@ -67,7 +67,7 @@ if opcao == "Início":
 if opcao == "Locação":
     st.title("🏡 Imóveis para Locação")
     # AQUI você coloca o código do seu "Outdoor" e da vitrine
-    st.image("sua_foto.jpg", use_container_width=True)
+    st.image("foto1.jpg", use_container_width=True)
     st.write("Confira nossas oportunidades exclusivas de aluguel.")
 
 elif opcao == "Venda":
