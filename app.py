@@ -39,7 +39,7 @@ if opcao == "Início":
     col1, col2 = st.columns(2)
     
     with col1:
-        st.image("https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=500&q=80")
+        st.st.image("foto1.jpg", caption="Legenda da sua foto", use_container_width=True)
         st.markdown("### Casa de Condomínio - R$ 850.000")
         st.write("📍 Localização: Jardim América")
         if st.button("Ver Detalhes (Imóvel 1)"):
