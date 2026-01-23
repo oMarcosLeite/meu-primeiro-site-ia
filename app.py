@@ -31,7 +31,8 @@ with st.sidebar:
 if opcao == "Início":
     st.title("🏡 Portal Cacau Imob")
     st.markdown("---")
-    
+    st.image("foto1.jpg", use_container_width=True)
+    st.divider()
     # Destaque principal
     st.subheader("Destaques da Semana")
     
