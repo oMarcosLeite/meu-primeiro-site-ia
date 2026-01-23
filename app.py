@@ -27,8 +27,6 @@ opcao = st.radio(
     ("Início", "Calculadora de Custos", "Gerador de Checklist", "Formatador de Anúncio"),
     horizontal=True  # Adicionei isso para as opções ficarem lado a lado, como um menu de site
 )
-    st.info("Logado como: Desenvolvedor Imobiliário")
-
 # --- PÁGINA INICIAL ---
 # --- PÁGINA INICIAL (VITRINE) ---
 if opcao == "Início":
