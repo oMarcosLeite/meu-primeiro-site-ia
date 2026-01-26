@@ -29,7 +29,7 @@ st.markdown("---")
 st.title("🏡 Portal Cacau Imob")
 
 # Coloque aqui o nome da sua foto que está no GitHub
-st.image("foto2.jpeg", use_container_width=500)
+st.image("foto3.jpeg", use_container_width=500)
 
 st.write("Bem-vindo ao nosso refúgio exclusivo. Explore nossa curadoria de imóveis.")
 
