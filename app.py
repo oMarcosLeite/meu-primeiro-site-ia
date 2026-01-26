@@ -14,23 +14,26 @@ st.markdown("""
 
 # 3. O CABEÇALHO (Título no Topo)
 # Usamos HTML para garantir que ele fique elegante e à esquerda
+# --- 1. CABEÇALHO (Já está no topo) ---
 st.markdown("""
     <h1 style='text-align: left; font-family: serif; color: #2C2C2C; font-size: 45px; margin-bottom: 0px;'>
-        Cacau
+        Suffolk
     </h1>
 """, unsafe_allow_html=True)
 
-# 4. OS BOTÕES (Agora eles ficam logo abaixo do título, à direita)
-col_espaco, col_menu = st.columns([3, 1]) # Criamos um espaço grande à esquerda para empurrar o menu
-with col_menu:
-    opcao = st.radio(
-        "", 
-        ("Locação", "Venda", "Lançamento"),
-        horizontal=True,
-        label_visibility="collapsed"
-    )
+st.markdown("---")
 
-st.markdown("---") # Linha fina separadora
+# --- 2. CONTEÚDO PRINCIPAL (Sem botões, aparece direto) ---
+# Note que agora não tem mais "if" nem "with". O código está encostado na esquerda.
+
+st.title("🏡 Portal Cacau Imob")
+
+# Coloque aqui o nome da sua foto que está no GitHub
+st.image("foto1.jpg", use_container_width=True)
+
+st.write("Bem-vindo ao nosso refúgio exclusivo. Explore nossa curadoria de imóveis.")
+
+# Aqui você pode continuar colocando o restante do conteúdo (vitrine, etc)
 
 # O RESTANTE DO SEU CÓDIGO SEGUE ABAIXO...
 import streamlit as st
