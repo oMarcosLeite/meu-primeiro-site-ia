@@ -16,7 +16,7 @@ st.markdown("""
 # Usamos HTML para garantir que ele fique elegante e à esquerda
 st.markdown("""
     <h1 style='text-align: left; font-family: serif; color: #2C2C2C; font-size: 45px; margin-bottom: 0px;'>
-        Suffolk
+        Cacau
     </h1>
 """, unsafe_allow_html=True)
 
