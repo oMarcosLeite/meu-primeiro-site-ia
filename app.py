@@ -1,4 +1,39 @@
 import streamlit as st
+
+# 1. ISSO PRECISA SER A PRIMEIRA LINHA: Configura o layout largo
+st.set_page_config(page_title="Suffolk", layout="wide")
+
+# 2. ESTILO PARA LIMPAR O TOPO (CSS)
+st.markdown("""
+    <style>
+    .main { background-color: #FDFCF8; }
+    /* Remove o espaço vazio exagerado no topo do Streamlit */
+    .block-container { padding-top: 1rem; }
+    </style>
+    """, unsafe_allow_html=True)
+
+# 3. O CABEÇALHO (Título no Topo)
+# Usamos HTML para garantir que ele fique elegante e à esquerda
+st.markdown("""
+    <h1 style='text-align: left; font-family: serif; color: #2C2C2C; font-size: 45px; margin-bottom: 0px;'>
+        Suffolk
+    </h1>
+""", unsafe_allow_html=True)
+
+# 4. OS BOTÕES (Agora eles ficam logo abaixo do título, à direita)
+col_espaco, col_menu = st.columns([3, 1]) # Criamos um espaço grande à esquerda para empurrar o menu
+with col_menu:
+    opcao = st.radio(
+        "", 
+        ("Locação", "Venda", "Lançamento"),
+        horizontal=True,
+        label_visibility="collapsed"
+    )
+
+st.markdown("---") # Linha fina separadora
+
+# O RESTANTE DO SEU CÓDIGO SEGUE ABAIXO...
+import streamlit as st
 # Estilo personalizado para parecer um site profissional
 st.markdown("""
     <style>
