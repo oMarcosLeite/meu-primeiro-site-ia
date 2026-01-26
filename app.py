@@ -10,6 +10,19 @@ st.markdown("<style>[data-testid='stAppViewContainer'] {background-color: #FDFCF
 st.markdown("<h1 style='font-family: serif; color: #2C2C2C;'>Cacau</h1>", unsafe_allow_html=True)
 st.markdown("---")
 
+# --- 4. A BARRA DE MENUS (Entre o título e a foto) ---
+# Criamos as abas aqui
+aba_inicio, aba_locacao, aba_venda, aba_sobre = st.tabs(["Início", "Locação", "Venda", "Sobre"])
+
+# Agora colocamos a foto dentro da aba "Início", que é a primeira que aparece
+with aba_inicio:
+    st.markdown("<br>", unsafe_allow_html=True) # Dá um pequeno espaço
+    
+    # 5. A FOTO (Ajustada para [1, 4, 1] para não ficar minúscula)
+    col1, col2, col3 = st.columns([1, 4, 1])
+    
+    with col2:
+        st.image("foto1.jpg", use_container_width=True)
 # 4. A FOTO (Estreita e Centralizada)
 # Criamos 3 colunas: as das pontas são largas (3), a do meio é estreita (2)
 col1, col2, col3 = st.columns([0.5, 6, 0.5])
