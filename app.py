@@ -6,7 +6,7 @@ st.set_page_config(page_title="Cacau", layout="wide")
 # 2. ESTILO PARA LIMPAR O TOPO (CSS)
 st.markdown("""
     <style>
-    .main { background-color: #FDFCF8; }
+    .main { background-color: #F0F2F6; }
     /* Remove o espaço vazio exagerado no topo do Streamlit */
     .block-container { padding-top: 1rem; }
     </style>
