@@ -35,36 +35,6 @@ st.write("Bem-vindo ao nosso refúgio exclusivo. Explore nossa curadoria de imó
 
 # Aqui você pode continuar colocando o restante do conteúdo (vitrine, etc)
 
-# O RESTANTE DO SEU CÓDIGO SEGUE ABAIXO...
-import streamlit as st
-# Estilo personalizado para parecer um site profissional
-st.markdown("""
-    <style>
-    .main {
-        background-color: #F0F2F6;
-    }
-    .stButton>button {
-        width: 100%;
-        border-radius: 5px;
-        height: 3em;
-        background-color: #007BFF;
-        color: white;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
-st.set_page_config(page_title="PropTech Pro", page_icon="🏢", layout="wide")
-# Agora o rádio de opções aparece no centro da página
-
-col_espaco1, col_espaco2, col_menu = st.columns([2, 1, 2])
-# 2. DEPOIS: Você usa a coluna que acabou de criar
-with col_menu:
-    opcao = st.radio(
-        "", 
-        ("Locação", "Venda", "Lançamento"),
-        horizontal=True,
-        label_visibility="collapsed"
-    )
 # --- PÁGINA INICIAL ---
 # --- PÁGINA INICIAL (VITRINE) ---
 # --- LOGICA DAS PÁGINAS ---
