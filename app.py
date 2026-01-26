@@ -1,14 +1,21 @@
 import streamlit as st
 
-# 1. Configuração básica
+# 1. Configuração (Sempre a primeira linha)
 st.set_page_config(page_title="Cacau Imob", layout="wide")
 
-# 2. Cor de fundo e limpeza do topo
-st.markdown("<style>[data-testid='stAppViewContainer'] {background-color: #FDFCF8 !important;} .block-container {padding-top: 1rem;}</style>", unsafe_allow_html=True)
+# 2. Estilo Visual
+st.markdown("""
+    <style>
+    [data-testid='stAppViewContainer'] {background-color: #FDFCF8 !important;}
+    .block-container {padding-top: 1rem;}
+    /* Estilo para deixar as abas (tabs) mais elegantes */
+    .stTabs [data-baseweb="tab-list"] {gap: 24px;}
+    .stTabs [data-baseweb="tab"] {font-family: serif; font-size: 18px; color: #666;}
+    </style>
+""", unsafe_allow_html=True)
 
 # 3. Título no topo
-st.markdown("<h1 style='font-family: serif; color: #2C2C2C;'>Cacau</h1>", unsafe_allow_html=True)
-st.markdown("---")
+st.markdown("<h1 style='font-family: serif; color: #2C2C2C; margin-bottom: 0px;'>Cacau</h1>", unsafe_allow_html=True)
 
 # --- 4. A BARRA DE MENUS (Entre o título e a foto) ---
 # Criamos as abas aqui
@@ -22,11 +29,8 @@ with aba_inicio:
     col1, col2, col3 = st.columns([1, 4, 1])
     
     with col2:
-        st.image("foto1.jpg", use_container_width=True)
-# 4. A FOTO (Estreita e Centralizada)
-# Criamos 3 colunas: as das pontas são largas (3), a do meio é estreita (2)
-col1, col2, col3 = st.columns([0.5, 6, 0.5])
+        st.image("foto3.jpeg", use_container_width=True)
+        st.write("Bem-vindo ao refúgio exclusivo.")
 
-with col2:
-    st.image("foto3.jpeg", use_container_width=True)
+# Se você quiser colocar algo nas outras abas depois, é só usar 'with aba_locacao:', etc.
 
