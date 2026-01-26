@@ -12,7 +12,7 @@ st.markdown("---")
 
 # 4. A FOTO (Estreita e Centralizada)
 # Criamos 3 colunas: as das pontas são largas (3), a do meio é estreita (2)
-col1, col2, col3 = st.columns([1, 4, 1])
+col1, col2, col3 = st.columns([0.5, 6, 0.5])
 
 with col2:
     st.image("foto3.jpeg", use_container_width=True)
