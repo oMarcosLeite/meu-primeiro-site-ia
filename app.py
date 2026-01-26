@@ -1,7 +1,7 @@
 import streamlit as st
 
 # 1. ISSO PRECISA SER A PRIMEIRA LINHA: Configura o layout largo
-st.set_page_config(page_title="Suffolk", layout="wide")
+st.set_page_config(page_title="Cacau", layout="wide")
 
 # 2. ESTILO PARA LIMPAR O TOPO (CSS)
 st.markdown("""
