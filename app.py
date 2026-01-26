@@ -16,4 +16,4 @@ col1, col2, col3 = st.columns([0.5, 6, 0.5])
 
 with col2:
     st.image("foto3.jpeg", use_container_width=True)
-    st.write("Bem-vindo ao refúgio exclusivo.")
+
