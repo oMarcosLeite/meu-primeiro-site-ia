@@ -1,41 +1,19 @@
 import streamlit as st
 
-# 1. ISSO PRECISA SER A PRIMEIRA LINHA: Configura o layout largo
-st.set_page_config(page_title="Cacau", layout="wide")
+# 1. Configuração básica
+st.set_page_config(page_title="Cacau Imob", layout="wide")
 
-# 2. ESTILO PARA LIMPAR O TOPO (CSS)
-st.markdown("""
-    <style>
-    .main { background-color: #F0F2F6; }
-    /* Remove o espaço vazio exagerado no topo do Streamlit */
-    .block-container { padding-top: 1rem; }
-    </style>
-    """, unsafe_allow_html=True)
+# 2. Cor de fundo e limpeza do topo
+st.markdown("<style>[data-testid='stAppViewContainer'] {background-color: #FDFCF8 !important;} .block-container {padding-top: 1rem;}</style>", unsafe_allow_html=True)
 
-# 3. O CABEÇALHO (Título no Topo)
-# Usamos HTML para garantir que ele fique elegante e à esquerda
-# --- 1. CABEÇALHO (Já está no topo) ---
-st.markdown("""
-    <h1 style='text-align: left; font-family: serif; color: #2C2C2C; font-size: 45px; margin-bottom: 0px;'>
-        Cacau
-    </h1>
-""", unsafe_allow_html=True)
-
+# 3. Título no topo
+st.markdown("<h1 style='font-family: serif; color: #2C2C2C;'>Cacau</h1>", unsafe_allow_html=True)
 st.markdown("---")
 
-# --- 2. CONTEÚDO PRINCIPAL (Sem botões, aparece direto) ---
-# Note que agora não tem mais "if" nem "with". O código está encostado na esquerda.
+# 4. A FOTO (Estreita e Centralizada)
+# Criamos 3 colunas: as das pontas são largas (3), a do meio é estreita (2)
+col1, col2, col3 = st.columns([3, 2, 3])
 
-st.title("🏡 Portal Cacau Imob")
-
-# Coloque aqui o nome da sua foto que está no GitHub
-st.image("foto3.jpeg", use_container_width=500)
-
-st.write("Bem-vindo ao nosso refúgio exclusivo. Explore nossa curadoria de imóveis.")
-
-# Aqui você pode continuar colocando o restante do conteúdo (vitrine, etc)
-
-# --- PÁGINA INICIAL ---
-# --- PÁGINA INICIAL (VITRINE) ---
-# --- LOGICA DAS PÁGINAS ---
-
+with col2:
+    st.image("foto3.jpeg", use_container_width=True)
+    st.write("Bem-vindo ao refúgio exclusivo.")
